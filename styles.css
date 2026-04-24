@@ -1,0 +1,140 @@
+/* ── Reset & Base ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Background ── */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Royal Purple Gradient */
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 50%, #ce93d8 100%);
+  font-family: 'Lato', sans-serif;
+  padding: 20px;
+}
+
+/* ── Card ── */
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow:
+    0 10px 40px rgba(106, 27, 154, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.06);
+  animation: fadeInUp 0.5s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Card Header ── */
+.card-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.icon {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  color: #6a1b9a; /* Deep Purple */
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 0.92rem;
+  color: #ab47bc; /* Amethyst Purple */
+}
+
+/* ── Card Body ── */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Input ── */
+input[type="text"] {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2px solid #e1bee7;
+  border-radius: 12px;
+  font-size: 0.97rem;
+  font-family: 'Lato', sans-serif;
+  color: #2c3e50;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fdfbff;
+}
+
+input[type="text"]::placeholder {
+  color: #ba68c8;
+}
+
+input[type="text"]:focus {
+  border-color: #8e24aa;
+  box-shadow: 0 0 0 3px rgba(142, 36, 170, 0.12);
+}
+
+/* ── Button ── */
+button {
+  width: 100%;
+  padding: 14px;
+  /* Purple Gradient Button */
+  background: linear-gradient(135deg, #8e24aa, #6a1b9a);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 14px rgba(106, 27, 154, 0.35);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(106, 27, 154, 0.45);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(106, 27, 154, 0.3);
+}
+
+/* ── Output Box ── */
+.card-output {
+  margin-top: 24px;
+  min-height: 52px;
+  background: #f3e5f5; /* Very Light Lavender */
+  border-left: 4px solid #9c27b0; /* Bold Purple Accent */
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+}
+
+#outputBox {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #4a148c;
+  word-break: break-word;
+  min-height: 24px;
+}
